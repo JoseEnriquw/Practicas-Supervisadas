@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Kikito\\source\\repos\\NetCoreApiPostgreSQL\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Kikito\\source\\repos\\NetCoreApiPostgreSQL\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kikito\\source\\repos\\NetCoreApiPostgreSQL\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj",
+        "projectName": "NetCoreAPIPostgreSQL.Data",
+        "projectPath": "C:\\Users\\Kikito\\source\\repos\\NetCoreApiPostgreSQL\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj",
+        "packagesPath": "C:\\Users\\Kikito\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kikito\\source\\repos\\NetCoreApiPostgreSQL\\NetCoreAPIPostgreSQL.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kikito\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Kikito\\source\\repos\\NetCoreApiPostgreSQL\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj": {
+                "projectPath": "C:\\Users\\Kikito\\source\\repos\\NetCoreApiPostgreSQL\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.90, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Kikito\\source\\repos\\NetCoreApiPostgreSQL\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kikito\\source\\repos\\NetCoreApiPostgreSQL\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj",
+        "projectName": "NetCoreAPIPostgreSQL.Model",
+        "projectPath": "C:\\Users\\Kikito\\source\\repos\\NetCoreApiPostgreSQL\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj",
+        "packagesPath": "C:\\Users\\Kikito\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kikito\\source\\repos\\NetCoreApiPostgreSQL\\NetCoreAPIPostgreSQL.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kikito\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
