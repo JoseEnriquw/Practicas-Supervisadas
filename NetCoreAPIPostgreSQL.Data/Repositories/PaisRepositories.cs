@@ -30,7 +30,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
             var db = dbConnection();
 
             var sql = @"
-                DELETE FROM public.""Provincias""  WHERE id=@Id
+                DELETE FROM public.""Pais""  WHERE id=@Id
                         ";
 
             var result = await db.ExecuteAsync(sql, new { Id = id });
@@ -53,7 +53,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
                       
         }
 
-        //DEVUELVE UNA PROVINCIA
+        //DEVUELVE UN PAIS
         public async Task<Pais> GetPais(int id)
         {
 
@@ -75,22 +75,6 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
                  INSERT INTO public.pais( nombre)
                  VALUES (  @Nombre)                
                             ";
-
-
-
-            var result = await db.ExecuteAsync(sql, new { pais.nombre });
-
-            return result > 0;
-        }
-
-        public async Task<bool> InsertAPIPais(Pais pais)
-        {
-            var db = dbConnection();
-
-            var sql = @"
-                 INSERT INTO public.pais( nombre)
-                 VALUES (  @Nombre)                
-                           where ";
 
 
 

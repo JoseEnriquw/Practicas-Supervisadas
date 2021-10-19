@@ -11,9 +11,8 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
     {
         Task<IEnumerable<Pais>> GetAllPais();
         Task<Pais> GetPais(int id);
-        Task<bool> InsertDefaultPais(Pais provincia);
-        Task<bool> InsertAPIPais(Pais provincia);
-        Task<bool> UpdatePais(Pais provincia);
+        Task<bool> InsertDefaultPais(Pais pais);
+        Task<bool> UpdatePais(Pais pais);
         Task<bool> DeletePais(int id);
 
     }

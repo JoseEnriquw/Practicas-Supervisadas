@@ -10,3 +10,15 @@ C:\Users\Kikito\source\repos\NetCoreAPIPostgreSQL\NetCoreAPIPostgreSQL.Model\obj
 C:\Users\Kikito\source\repos\NetCoreAPIPostgreSQL\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\ref\NetCoreAPIPostgreSQL.Model.dll
 C:\Users\Kikito\source\repos\NetCoreAPIPostgreSQL\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.pdb
 C:\Users\Kikito\source\repos\NetCoreApiPostgreSQL\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.csproj.AssemblyReference.cache
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Model.deps.json
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Model.dll
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\bin\Debug\net5.0\ref\NetCoreAPIPostgreSQL.Model.dll
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Model.pdb
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.csproj.AssemblyReference.cache
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.AssemblyInfoInputs.cache
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.AssemblyInfo.cs
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.csproj.CoreCompileInputs.cache
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.dll
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\ref\NetCoreAPIPostgreSQL.Model.dll
+C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.pdb

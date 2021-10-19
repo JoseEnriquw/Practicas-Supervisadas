@@ -11,7 +11,8 @@ namespace NetCoreAPIPostgreSQL.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class PaisController : Controller
-    {     
+    {   
+        
         private readonly IPaisRepositories _paisRepositories;
         public PaisController(IPaisRepositories paisRepositories)
         {
@@ -19,46 +20,36 @@ namespace NetCoreAPIPostgreSQL.Controllers
         }
         
         [HttpGet]
-        public IActionResult GetAllPais()
+        public async Task<IActionResult> GetAllPais()
         {
-            return Ok( _paisRepositories.GetAllPais());
+            return Ok(await _paisRepositories.GetAllPais());
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetPais(int id)
+        public async Task<IActionResult> GetPais(int id)
         {
-            return Ok( _paisRepositories.GetPais(id));
+            return Ok(await _paisRepositories.GetPais(id));
         }
 
         [HttpPost]
         public async Task<IActionResult> CreatePais([FromBody] Pais pais)
         {
-            if (pais == null) BadRequest();
-             
-            if(!ModelState.IsValid) BadRequest(ModelState);
+            if (pais == null) 
+                return BadRequest();
+            
+            if (!ModelState.IsValid) 
+                return BadRequest(ModelState);
 
             var created=await _paisRepositories.InsertDefaultPais(pais);
-
+                
             return Created("created", created);
         }
-
-        [HttpPost]
-        public async Task<IActionResult> MigrarPais([FromBody] Pais pais)
-        {
-            if (pais == null) BadRequest();
-
-            if (!ModelState.IsValid) BadRequest(ModelState);
-
-            var created = await _paisRepositories.InsertAPIPais(pais);
-
-            return Created("created", created);
-        }
-
 
         [HttpPut]
         public async Task<IActionResult> UpdatePais([FromBody] Pais pais)
         {
-            if (pais == null) BadRequest();
+            if (pais == null) 
+                return BadRequest ();
 
            await _paisRepositories.UpdatePais(pais);
 
