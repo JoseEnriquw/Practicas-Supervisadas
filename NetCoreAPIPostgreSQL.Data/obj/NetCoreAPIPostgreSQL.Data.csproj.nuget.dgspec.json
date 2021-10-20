@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kikito\\Documents\\GitHub\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj": {}
+    "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kikito\\Documents\\GitHub\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj": {
+    "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kikito\\Documents\\GitHub\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj",
         "projectName": "NetCoreAPIPostgreSQL.Data",
-        "projectPath": "C:\\Users\\Kikito\\Documents\\GitHub\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj",
-        "packagesPath": "C:\\Users\\Kikito\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kikito\\Documents\\GitHub\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\obj\\",
+        "projectPath": "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kikito\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Kikito\\Documents\\GitHub\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj": {
-                "projectPath": "C:\\Users\\Kikito\\Documents\\GitHub\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj"
+              "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj": {
+                "projectPath": "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj"
               }
             }
           }
@@ -72,21 +72,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Kikito\\Documents\\GitHub\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj": {
+    "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kikito\\Documents\\GitHub\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj",
         "projectName": "NetCoreAPIPostgreSQL.Model",
-        "projectPath": "C:\\Users\\Kikito\\Documents\\GitHub\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj",
-        "packagesPath": "C:\\Users\\Kikito\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kikito\\Documents\\GitHub\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\obj\\",
+        "projectPath": "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kikito\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -126,7 +126,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
