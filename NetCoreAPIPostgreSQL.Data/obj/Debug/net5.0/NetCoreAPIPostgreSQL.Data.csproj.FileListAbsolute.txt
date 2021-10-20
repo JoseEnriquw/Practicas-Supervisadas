@@ -27,3 +27,17 @@ C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Dat
 C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.dll
 C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\ref\NetCoreAPIPostgreSQL.Data.dll
 C:\Users\ari_a\OneDrive\Escritorio\Practica Supervisada\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.pdb
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Data.deps.json
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Data.dll
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\bin\Debug\net5.0\ref\NetCoreAPIPostgreSQL.Data.dll
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Data.pdb
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Model.dll
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Model.pdb
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.csproj.AssemblyReference.cache
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.AssemblyInfoInputs.cache
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.AssemblyInfo.cs
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.csproj.CoreCompileInputs.cache
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.dll
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\ref\NetCoreAPIPostgreSQL.Data.dll
+C:\Users\Kikito\Documents\GitHub\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.pdb

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace NetCoreAPIPostgreSQL.Model
+namespace NetCoreAPIPostgreSQL.Services.PostModels
 {
-    public class Provincia
+    public class ProvinciaViewModels
     {
         public int id { get; set; }
         public string nombre { get; set; }
-        public int idpais { get; set; }
-
     }
 }

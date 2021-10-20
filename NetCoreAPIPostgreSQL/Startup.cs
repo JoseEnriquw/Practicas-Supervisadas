@@ -32,6 +32,7 @@ namespace NetCoreAPIPostgreSQL
             services.AddSingleton(postgreSQLConnectionConfiguration);
 
             services.AddScoped<IPaisRepositories, PaisRepositories>();
+            services.AddScoped<IProvinciaRepositories, ProvinciaRepositories>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

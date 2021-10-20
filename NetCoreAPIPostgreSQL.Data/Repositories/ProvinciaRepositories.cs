@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NetCoreAPIPostgreSQL.Data.Repositories
 {
-    class ProvinciaRepositories
+    public class ProvinciaRepositories : IProvinciaRepositories 
     {
         private PostgreSQLConfiguration _connectionString;
 
@@ -30,7 +30,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
             var db = dbConnection();
 
             var sql = @"
-                DELETE FROM public.""Provincias""  WHERE id=@Id
+                DELETE FROM public.provincias  WHERE id=@Id
                         ";
 
             var result = await db.ExecuteAsync(sql, new { Id = id });
@@ -74,7 +74,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
                  VALUES (  @Nombre, @idPais)                
                             ";
 
-             var result = await db.ExecuteAsync(sql, new { provincia.nombre, provincia.idPais});
+             var result = await db.ExecuteAsync(sql, new { provincia.nombre, provincia.idpais});
 
             return result > 0;
         }
