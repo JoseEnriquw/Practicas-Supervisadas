@@ -30,7 +30,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
             var db = dbConnection();
 
             var sql = @"
-                DELETE FROM public.""Pais""  WHERE id=@Id
+                DELETE FROM public.pais WHERE id=@Id
                         ";
 
             var result = await db.ExecuteAsync(sql, new { Id = id });
