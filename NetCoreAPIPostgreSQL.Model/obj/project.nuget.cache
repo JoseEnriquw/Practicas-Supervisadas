@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/GVnlZZrKyJlWh0KOvOyjt4/p9WGF+t5/MgxQqge/Kk6s5Hl3cNRGkb+zfC16a+SSt0O3LV3O9RdNLPbCOT3Zg==",
+  "dgSpecHash": "grCHCncatfXKrpQ2UJ/6JfNKKey8ZTcyRsQ8NGIrOY1QSL75qwak0sQW2h+JpwH79mLyxGGl68T/sN8amXEXLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\Source\\Repos\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj",
+  "projectFilePath": "C:\\Users\\PC\\source\\repos\\Practica_Profesional_2021\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

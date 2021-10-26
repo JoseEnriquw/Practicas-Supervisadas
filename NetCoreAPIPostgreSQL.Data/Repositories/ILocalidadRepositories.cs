@@ -10,8 +10,8 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
     public interface ILocalidadRepositories
     {
         Task<IEnumerable<Localidad>> GetAllLocalidad();
-        Task<Localidad> GetLocalidad();
-        Task<bool> InsetDefaultLocalidad(Localidad localidad);
+        Task<Localidad> GetLocalidad(int id);
+        Task<bool> InsertDefaultLocalidad(Localidad localidad);
         Task<bool> UpdateLocalidad(Localidad localidad);
         Task<bool> DeleteLocalidad(int id);
     }
