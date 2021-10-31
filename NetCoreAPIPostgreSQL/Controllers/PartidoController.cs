@@ -16,16 +16,56 @@ namespace NetCoreAPIPostgreSQL.Controllers
 
     public class PartidoController : Controller
     {
+        private HttpClient client = new HttpClient();
         private readonly IPartidoRepositories _partidoRepositories;
-        public PartidoController(IPartidoRepositories partidoRepositories)
+        private readonly IProvinciaRepositories _provinciaRepositories;
+        public PartidoController(IPartidoRepositories partidoRepositories, IProvinciaRepositories provinciaRepositories)
         {
             _partidoRepositories = partidoRepositories;
+            _provinciaRepositories = provinciaRepositories;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllPartido()
         {
             return Ok(await _partidoRepositories.GetAllPartidos());
+        }
+
+        [HttpGet("getdatagobtodb")]
+        public async Task<IActionResult> GetDataGobProvincias()
+        {
+            var datos = await GetPartidoscDataGobAsyn();
+            Partido partidos = new Partido();
+            Provincia provincias = new Provincia();
+
+
+            foreach (PartidoViewModels item in datos.municipios)
+            {
+                partidos.nombre = item.nombre;
+                //Pais 1 Argentina
+                // partidos.idprovincia = 1;
+
+                try
+                {
+                    dynamic validate = await _partidoRepositories.GetPartidoByName(partidos.nombre);
+                    if (validate == null)
+                    {
+                        provincias = await _provinciaRepositories.GetProvinciaByName(item.provincia.nombre);
+
+                        if (provincias != null)
+                        {
+                            partidos.idprovincia = provincias.id;
+                            await _partidoRepositories.InsertDefaultPartido(partidos);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+
+
+            return Ok(datos);
         }
 
         [HttpGet("{id}")]
@@ -66,6 +106,21 @@ namespace NetCoreAPIPostgreSQL.Controllers
             await _partidoRepositories.DeletePartido(id);
 
             return NoContent();
+        }
+
+
+        private async Task<ResponsePartido> GetPartidoscDataGobAsyn()
+        {
+            ResponsePartido product = null;
+            HttpResponseMessage response = await client.GetAsync("https://apis.datos.gob.ar/georef/api/municipios?campos=id,nombre,provincia.nombre,provincia.id&max=2000");
+            if (response.IsSuccessStatusCode)
+            {
+                product = await response.Content.ReadAsAsync<ResponsePartido>();
+
+                return product;
+            }
+
+            return null;
         }
 
     }

@@ -18,6 +18,7 @@ namespace NetCoreAPIPostgreSQL
 {
     public class Startup
     {
+        private readonly string MyCors = "MyCors";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -31,6 +32,13 @@ namespace NetCoreAPIPostgreSQL
             var postgreSQLConnectionConfiguration = new PostgreSQLConfiguration(Configuration.GetConnectionString("PostgreSQLConnection"));
             services.AddSingleton(postgreSQLConnectionConfiguration);
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyCors, builder =>
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+                );
+            });
+
             services.AddScoped<IPaisRepositories, PaisRepositories>();
             services.AddScoped<IProvinciaRepositories, ProvinciaRepositories>();
             services.AddScoped<IPartidoRepositories, PartidoRepositories>();
@@ -42,12 +50,14 @@ namespace NetCoreAPIPostgreSQL
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "NetCoreAPIPostgreSQL", Version = "v1" });
             });
 
-           
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -59,11 +69,13 @@ namespace NetCoreAPIPostgreSQL
 
             app.UseRouting();
 
+            app.UseCors(MyCors);
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllers().RequireCors(MyCors);
             });
         }
     }

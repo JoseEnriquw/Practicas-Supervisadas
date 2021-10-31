@@ -11,6 +11,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
     {
         Task<IEnumerable<Localidad>> GetAllLocalidad();
         Task<Localidad> GetLocalidad(int id);
+        Task<Localidad> GetLocalidadByName(string name);
         Task<bool> InsertDefaultLocalidad(Localidad localidad);
         Task<bool> UpdateLocalidad(Localidad localidad);
         Task<bool> DeleteLocalidad(int id);

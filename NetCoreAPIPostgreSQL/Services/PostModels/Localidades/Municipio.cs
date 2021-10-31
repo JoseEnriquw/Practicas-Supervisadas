@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NetCoreAPIPostgreSQL.Services.PostModels
+namespace NetCoreAPIPostgreSQL.Services.PostModels.Localidades
 {
-    public class PartidoViewModel
+    public class Municipio
     {
-        public int id { get; set; }
+        public string id { get; set; }
         public string nombre { get; set; }
-
     }
 }

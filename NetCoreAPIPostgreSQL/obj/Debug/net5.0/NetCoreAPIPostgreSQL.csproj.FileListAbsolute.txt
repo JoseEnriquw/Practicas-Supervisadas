@@ -168,3 +168,46 @@ C:\Users\PC\source\repos\Practica_Profesional_2021\Practicas-Supervisadas\NetCor
 C:\Users\PC\source\repos\Practica_Profesional_2021\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\ref\NetCoreAPIPostgreSQL.dll
 C:\Users\PC\source\repos\Practica_Profesional_2021\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.pdb
 C:\Users\PC\source\repos\Practica_Profesional_2021\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.genruntimeconfig.cache
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\appsettings.Development.json
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\appsettings.json
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\NetCoreAPIPostgreSQL.exe
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\NetCoreAPIPostgreSQL.deps.json
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\NetCoreAPIPostgreSQL.runtimeconfig.json
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\NetCoreAPIPostgreSQL.runtimeconfig.dev.json
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\NetCoreAPIPostgreSQL.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\ref\NetCoreAPIPostgreSQL.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\NetCoreAPIPostgreSQL.pdb
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\Dapper.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\Microsoft.OpenApi.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\Npgsql.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\System.Data.SqlClient.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Data.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Model.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Data.pdb
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Model.pdb
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.csproj.AssemblyReference.cache
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.AssemblyInfoInputs.cache
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.AssemblyInfo.cs
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.csproj.CoreCompileInputs.cache
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.MvcApplicationPartsAssemblyInfo.cs
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.MvcApplicationPartsAssemblyInfo.cache
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\staticwebassets\NetCoreAPIPostgreSQL.StaticWebAssets.Manifest.cache
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\staticwebassets\NetCoreAPIPostgreSQL.StaticWebAssets.xml
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\scopedcss\bundle\NetCoreAPIPostgreSQL.styles.css
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.RazorTargetAssemblyInfo.cache
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\ref\NetCoreAPIPostgreSQL.dll
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.pdb
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.genruntimeconfig.cache

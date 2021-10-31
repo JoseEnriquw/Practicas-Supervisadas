@@ -34,16 +34,27 @@ namespace NetCoreAPIPostgreSQL.Controllers
         [HttpGet("getdatagobtodb")]
         public async Task<IActionResult> GetDataGobProvincias()
         {
-            List<ProvinciaViewModels> datos = await GetProvinciacDataGobAsyn();
+             var datos = await GetProvinciacDataGobAsyn();
             Provincia provincias = new Provincia();
 
-            foreach (ProvinciaViewModels item in datos)
+            foreach (ProvinciaViewModels item in datos.provincias)
             {
-                provincias.nombre = item.nombre;
-                //Pais 1 Argentina
-                provincias.idpais = 1;
 
-               await _provinciaRepositories.InsertDefaultProvincia(provincias);
+                try
+                {
+                    dynamic validate = _provinciaRepositories.GetProvinciaByName(item.nombre);
+
+                    if (validate == null)
+                    {
+                        provincias.nombre = item.nombre;
+                        //Pais 1 Argentina
+                        provincias.idpais = 1;
+
+                        await _provinciaRepositories.InsertDefaultProvincia(provincias);
+                    }
+                }
+                catch (Exception ex) {
+                }
             }
 
             
@@ -92,15 +103,18 @@ namespace NetCoreAPIPostgreSQL.Controllers
         }
 
 
-       private async Task<List<ProvinciaViewModels>> GetProvinciacDataGobAsyn()
+         private async Task<ResponseProvincia> GetProvinciacDataGobAsyn()
         {
-            List<ProvinciaViewModels> product = null;
-            HttpResponseMessage response = await client.GetAsync("https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre");
+            ResponseProvincia product = null;
+            HttpResponseMessage response = await client.GetAsync("https://apis.datos.gob.ar/georef/api/provincias");
             if (response.IsSuccessStatusCode)
             {
-                product = JsonConvert.DeserializeObject<List<ProvinciaViewModels>> (await response.Content.ReadAsAsync<string>());
+                product = await response.Content.ReadAsAsync<ResponseProvincia>();
+
+                return product;
             }
-            return product;
+
+            return null;
         }
 
     }

@@ -11,6 +11,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
     {
         Task<IEnumerable<Provincia>> GetAllProvincias();
         Task<Provincia> GetProvincia(int id);
+        Task<Provincia> GetProvinciaByName(string name);
         Task<bool> InsertDefaultProvincia(Provincia provincia);
         Task<bool> UpdateProvincia(Provincia provincia);
         Task<bool> DeleteProvincia(int id);

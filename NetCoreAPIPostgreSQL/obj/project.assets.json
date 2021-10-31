@@ -5295,25 +5295,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Administrador.WIN-OOK7P66G29B\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\source\\repos\\Practica_Profesional_2021\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL\\NetCoreAPIPostgreSQL.csproj",
+      "projectUniqueName": "E:\\Programación\\Practicas Supervisadas\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL\\NetCoreAPIPostgreSQL.csproj",
       "projectName": "NetCoreAPIPostgreSQL",
-      "projectPath": "C:\\Users\\PC\\source\\repos\\Practica_Profesional_2021\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL\\NetCoreAPIPostgreSQL.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\source\\repos\\Practica_Profesional_2021\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL\\obj\\",
+      "projectPath": "E:\\Programación\\Practicas Supervisadas\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL\\NetCoreAPIPostgreSQL.csproj",
+      "packagesPath": "C:\\Users\\Administrador.WIN-OOK7P66G29B\\.nuget\\packages\\",
+      "outputPath": "E:\\Programación\\Practicas Supervisadas\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Administrador.WIN-OOK7P66G29B\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5326,11 +5321,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\PC\\source\\repos\\Practica_Profesional_2021\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj": {
-              "projectPath": "C:\\Users\\PC\\source\\repos\\Practica_Profesional_2021\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj"
+            "E:\\Programación\\Practicas Supervisadas\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj": {
+              "projectPath": "E:\\Programación\\Practicas Supervisadas\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Data\\NetCoreAPIPostgreSQL.Data.csproj"
             },
-            "C:\\Users\\PC\\source\\repos\\Practica_Profesional_2021\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj": {
-              "projectPath": "C:\\Users\\PC\\source\\repos\\Practica_Profesional_2021\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj"
+            "E:\\Programación\\Practicas Supervisadas\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj": {
+              "projectPath": "E:\\Programación\\Practicas Supervisadas\\Practicas-Supervisadas\\NetCoreAPIPostgreSQL.Model\\NetCoreAPIPostgreSQL.Model.csproj"
             }
           }
         }
@@ -5376,7 +5371,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

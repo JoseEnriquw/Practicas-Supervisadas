@@ -1,15 +1,15 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace NetCoreAPIPostgreSQL.Model
+namespace NetCoreAPIPostgreSQL.Services.PostModels
 {
-    public class Localidad
+    public class PartidoViewModels
     {
         public int id { get; set; }
         public string nombre { get; set; }
-        public int idpartido { get; set; }
+        public ProvinciaViewModels provincia { get; set; }
+
     }
 }

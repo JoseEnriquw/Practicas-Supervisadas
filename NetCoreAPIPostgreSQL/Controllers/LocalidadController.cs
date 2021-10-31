@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using NetCoreAPIPostgreSQL.Services.PostModels;
 using Newtonsoft.Json;
+using NetCoreAPIPostgreSQL.Services.PostModels.Localidades;
 
 namespace NetCoreAPIPostgreSQL.Controllers
 {
@@ -16,16 +17,55 @@ namespace NetCoreAPIPostgreSQL.Controllers
 
     public class LocalidadController : Controller
     {
+        private HttpClient client = new HttpClient();
         private readonly ILocalidadRepositories _localidadRepositories;
-        public LocalidadController(ILocalidadRepositories localidadRepositories)
+        private readonly IPartidoRepositories _partidoRepositories;
+        public LocalidadController(ILocalidadRepositories localidadRepositories, IPartidoRepositories partidoRepositories)
         {
             _localidadRepositories = localidadRepositories;
+            _partidoRepositories = partidoRepositories;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllLocalidad()
         {
             return Ok(await _localidadRepositories.GetAllLocalidad());
+        }
+
+        [HttpGet("getdatagobtodb")]
+        public async Task<IActionResult> GetDataGobProvincias()
+        {
+            var datos = await GetLocalidadescDataGobAsyn();
+            Localidad localidad = new Localidad();
+            Partido partidos = new Partido();
+
+
+            foreach (LocalidadViewModels item in datos.localidades)
+            {
+                localidad.nombre = item.nombre;
+              
+
+                try
+                {
+                    dynamic validate = await _localidadRepositories.GetLocalidadByName(localidad.nombre);
+                    if (validate == null)
+                    {
+                        partidos = await _partidoRepositories.GetPartidoByName(item.municipio.nombre);
+
+                        if (partidos != null)
+                        {
+                            localidad.idpartido = partidos.id;
+                            await _localidadRepositories.InsertDefaultLocalidad(localidad);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+
+
+            return Ok(datos);
         }
 
         [HttpGet("{id}")]
@@ -66,5 +106,21 @@ namespace NetCoreAPIPostgreSQL.Controllers
 
             return NoContent();
         }
+
+
+        private async Task<ResponseLocalidad> GetLocalidadescDataGobAsyn()
+        {
+            ResponseLocalidad product = null;
+            HttpResponseMessage response = await client.GetAsync("https://apis.datos.gob.ar/georef/api/localidades?&campos=id,nombre,municipio&max=4200");
+            if (response.IsSuccessStatusCode)
+            {
+                product = await response.Content.ReadAsAsync<ResponseLocalidad>();
+
+                return product;
+            }
+
+            return null;
+        }
+
     }
 }

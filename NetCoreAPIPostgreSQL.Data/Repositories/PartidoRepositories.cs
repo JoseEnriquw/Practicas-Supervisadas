@@ -92,5 +92,17 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
 
             return result > 0;
         }
+
+        public async Task<Partido> GetPartidoByName(string name)
+        {
+
+            var db = dbConnection();
+            var query = @"
+                SELECT   id, nombre, idprovincia FROM public.partidos
+                         WHERE nombre=@Name   ";
+
+
+            return await db.QueryFirstOrDefaultAsync<Partido>(query, new { Name = name });
+        }
     }
 }

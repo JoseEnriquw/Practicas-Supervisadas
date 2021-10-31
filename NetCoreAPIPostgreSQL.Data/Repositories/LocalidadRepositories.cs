@@ -12,6 +12,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
 {
     public class LocalidadRepositories : ILocalidadRepositories
     {
+
         private PostgreSQLConfiguration _connectionString;
 
         public LocalidadRepositories(PostgreSQLConfiguration connectionString)
@@ -44,23 +45,36 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
 
             var db = dbConnection();
             var query = @"
-                SELECT  id, nombre, idpais, idprovincia, idpartido  From public.localidades
+                SELECT  id, nombre,idpartido  From public.localidades
                             ";
 
             return await db.QueryAsync<Localidad>(query, new { });
         }
 
-        //Devuelve una localidad
+        //Devuelve una localidad POR ID
         public async Task<Localidad> GetLocalidad(int id)
         {
 
             var db = dbConnection();
             var query = @"
-                SELECT   id, nombre, idpais, idprovincia, idpartido FROM public.localidades
+                SELECT   id, nombre, idpartido FROM public.localidades
                     WHERE id=@Id   
                             ";
 
             return await db.QueryFirstOrDefaultAsync<Localidad>(query, new { Id = id});
+        }
+
+        //Devuelve una localidad POR NOMBRE
+        public async Task<Localidad> GetLocalidadByName(string name)
+        {
+
+            var db = dbConnection();
+            var query = @"
+                SELECT   id, nombre, idpartido FROM public.localidades
+                    WHERE nombre=@Name   
+                            ";
+
+            return await db.QueryFirstOrDefaultAsync<Localidad>(query, new { Name = name });
         }
 
         //Insertar
@@ -69,11 +83,11 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
             var db = dbConnection();
 
             var sql = @"
-                 INSERT INTO public.localidades( nombre, idpais, idprovincia, idpartido)
-                 VALUES (  @Nombre, @idPais, @idProvincia, @idPartido)
+                 INSERT INTO public.localidades( nombre, idpartido)
+                 VALUES (  @Nombre, @idPartido)
                         ";
 
-            var result = await db.ExecuteAsync(sql, new { localidad.nombre, localidad.idpais, localidad.idprovincia, localidad.idpartido});
+            var result = await db.ExecuteAsync(sql, new { localidad.nombre, localidad.idpartido});
 
             return result > 0;
         }
