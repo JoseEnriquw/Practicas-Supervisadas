@@ -71,7 +71,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
 
                 return await db.QueryAsync<Localidad>(query, new { PartNombre = filters.nombrePartido });
             }
-            else if (filters.nombrePartido != "")
+            else if (filters.nombreLocalidad != "")
             {
 
                 query = @"

@@ -49,7 +49,8 @@ namespace NetCoreAPIPostgreSQL.Controllers
             var datos = await GetLocalidadescDataGobAsyn();
             Localidad localidad = new Localidad();
             Partido partidos = new Partido();
-
+            string mensaje = "";
+            int aux = 0;
 
             foreach (LocalidadViewModels item in datos.localidades)
             {
@@ -66,8 +67,11 @@ namespace NetCoreAPIPostgreSQL.Controllers
                         if (partidos != null)
                         {
                             localidad.idpartido = partidos.id;
-                            await _localidadRepositories.InsertDefaultLocalidad(localidad);
+                            var cant=await _localidadRepositories.InsertDefaultLocalidad(localidad);
+                            if (cant != null) aux += cant;                
                         }
+
+                        
                     }
                 }
                 catch (Exception ex)
@@ -75,8 +79,11 @@ namespace NetCoreAPIPostgreSQL.Controllers
                 }
             }
 
+            if (aux > 0) { mensaje = "SE MIGRARON CON EXITO " + aux + " DATOS DE LOCALIDADES DE LA API DEL GOBIERNO."; }
+            else mensaje = "NO HUBO INGRESO DE DATOS, DEBIDO A QUE YA ESTAN EN LA BASE DE DATOS O NO HAY DATOS PARA MIGRAR";
 
-            return Ok(datos);
+
+            return Ok(mensaje);
         }
 
         [HttpGet("{id}")]

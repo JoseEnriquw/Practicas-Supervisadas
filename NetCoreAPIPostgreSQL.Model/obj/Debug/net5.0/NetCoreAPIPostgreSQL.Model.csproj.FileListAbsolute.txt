@@ -50,6 +50,7 @@ E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgre
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Model\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Model.dll
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Model\bin\Debug\net5.0\ref\NetCoreAPIPostgreSQL.Model.dll
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Model\bin\Debug\net5.0\NetCoreAPIPostgreSQL.Model.pdb
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.csproj.AssemblyReference.cache
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.GeneratedMSBuildEditorConfig.editorconfig
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.AssemblyInfoInputs.cache
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Model\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Model.AssemblyInfo.cs
