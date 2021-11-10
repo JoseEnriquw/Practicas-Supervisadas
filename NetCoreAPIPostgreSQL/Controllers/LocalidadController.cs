@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using NetCoreAPIPostgreSQL.Services.PostModels;
 using Newtonsoft.Json;
 using NetCoreAPIPostgreSQL.Services.PostModels.Localidades;
+using NetCoreAPIPostgreSQL.Model.Filters;
 
 namespace NetCoreAPIPostgreSQL.Controllers
 {
@@ -26,10 +27,20 @@ namespace NetCoreAPIPostgreSQL.Controllers
             _partidoRepositories = partidoRepositories;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAllLocalidad()
+        [Route("get")]
+        [HttpPost]
+        public async Task<IActionResult> GetAllPartido([FromBody] LocalidadesFilters filters)
         {
-            return Ok(await _localidadRepositories.GetAllLocalidad());
+            if (filters.nombreLocalidad == null)
+            {
+                filters.nombreLocalidad = "";
+            }
+            if (filters.nombrePartido == null)
+            {
+                filters.nombrePartido = "";
+            }
+
+            return Ok(await _localidadRepositories.GetAllLocalidad(filters));
         }
 
         [HttpGet("getdatagobtodb")]

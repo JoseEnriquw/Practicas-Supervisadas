@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\NetCoreAPIPostgreSQL",
+    "\\NetCoreAPIPostgreSQL\\Controllers",
+    "\\NetCoreAPIPostgreSQL\\Services",
+    "\\NetCoreAPIPostgreSQL\\Services\\PostModels"
+  ],
+  "SelectedNode": "\\NetCoreAPIPostgreSQL\\appsettings.json",
+  "PreviewInSolutionExplorer": false
+}

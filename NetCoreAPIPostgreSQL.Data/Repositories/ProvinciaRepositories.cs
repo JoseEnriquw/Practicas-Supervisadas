@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using NetCoreAPIPostgreSQL.Model;
+using NetCoreAPIPostgreSQL.Model.Filters;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace NetCoreAPIPostgreSQL.Data.Repositories
 {
-    public class ProvinciaRepositories : IProvinciaRepositories 
+    public class ProvinciaRepositories : IProvinciaRepositories
     {
         private PostgreSQLConfiguration _connectionString;
 
@@ -30,8 +31,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
             var db = dbConnection();
 
             var sql = @"
-                DELETE FROM public.provincias  WHERE id=@Id
-                        ";
+                DELETE FROM public.provincias WHERE id=@Id";
 
             var result = await db.ExecuteAsync(sql, new { Id = id });
 
@@ -39,17 +39,35 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
         }
 
         //Devuelve las Provincias
-        public async Task<IEnumerable<Provincia>> GetAllProvincias()
+        public async Task<IEnumerable<Provincia>> GetAllProvincias(ProvinciaFilters filters)
         {
-     
             var db = dbConnection();
-            var query = @"
-                SELECT  id, nombre, idpais  From public.provincias
+            string query;
+
+            if (filters.paisNombre != "")
+            {
+                query = @"
+                SELECT  prov.id, prov.nombre, prov.idpais  From public.provincias as prov
+                        inner join pais as p on p.id = prov.idpais
+                        where p.nombre = @PNombre
+                        ORDER BY prov.id ASC
                             ";
 
-            return await db.QueryAsync<Provincia>(query, new { });
+                return  await db.QueryAsync<Provincia>(query, new { PNombre = filters.paisNombre });
+            }
+            else
+            {
+                query = @"
+                SELECT  id, nombre, idpais  From public.provincias
+                        ORDER BY id ASC
+                            ";
+
+                return await db.QueryAsync<Provincia>(query, new { });
+            }
 
         }
+
+
 
         //Devuelve una Provincia
         public async Task<Provincia> GetProvincia(int id)
@@ -65,7 +83,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
         }
 
         //Insertar Provincia
-        public async Task<bool> InsertDefaultProvincia(Provincia provincia)
+        public async Task<int> InsertDefaultProvincia(Provincia provincia)
         {
             var db = dbConnection();
 
@@ -74,9 +92,9 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
                  VALUES (  @Nombre, @idPais)                
                             ";
 
-             var result = await db.ExecuteAsync(sql, new { provincia.nombre, provincia.idpais});
+            var result = await db.ExecuteAsync(sql, new { provincia.nombre, provincia.idpais });
 
-            return result > 0;
+            return result;
         }
 
         //Guardar
@@ -87,12 +105,12 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
 
             var sql = @"
              UPDATE public.provincias
-             SET nombre=@Nombre  
+             SET nombre=@Nombre,idpais=@idPais  
              WHERE id=@Id
                             ";
 
 
-            var result = await db.ExecuteAsync(sql, new { Nombre = provincia.nombre, Id = provincia.id });
+            var result = await db.ExecuteAsync(sql, new { Nombre = provincia.nombre, idPais = provincia.idpais, Id = provincia.id });
 
             return result > 0;
         }
@@ -102,10 +120,12 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
             var db = dbConnection();
             var query = @"
                 SELECT   id, nombre, idpais FROM public.provincias
-                         WHERE nombre=@Name   ";
+                         WHERE nombre=@Name";
 
 
             return await db.QueryFirstOrDefaultAsync<Provincia>(query, new { Name = name });
         }
+
+        
     }
 }

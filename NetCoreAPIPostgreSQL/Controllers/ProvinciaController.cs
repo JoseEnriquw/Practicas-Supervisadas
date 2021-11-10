@@ -2,12 +2,15 @@
 using NetCoreAPIPostgreSQL.Data.Repositories;
 using NetCoreAPIPostgreSQL.Model;
 using System;
+using System.Text.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using NetCoreAPIPostgreSQL.Services.PostModels;
 using Newtonsoft.Json;
+
+using NetCoreAPIPostgreSQL.Model.Filters;
 
 namespace NetCoreAPIPostgreSQL.Controllers
 {   
@@ -20,46 +23,61 @@ namespace NetCoreAPIPostgreSQL.Controllers
 
 
         private readonly IProvinciaRepositories _provinciaRepositories;
-        public ProvinciaController(IProvinciaRepositories provinciaRepositories)
+        private readonly IPaisRepositories _paisRepositories;
+
+        public ProvinciaController(IProvinciaRepositories provinciaRepositories, IPaisRepositories paisRepositories)
         {
             _provinciaRepositories = provinciaRepositories;
+           _paisRepositories=paisRepositories;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAllProvincia()
-        {
-            return Ok(await _provinciaRepositories.GetAllProvincias());
-        }
 
         [HttpGet("getdatagobtodb")]
         public async Task<IActionResult> GetDataGobProvincias()
         {
              var datos = await GetProvinciacDataGobAsyn();
             Provincia provincias = new Provincia();
+            string mensaje = "";
+            int aux = 0;
 
             foreach (ProvinciaViewModels item in datos.provincias)
             {
 
                 try
                 {
-                    dynamic validate = _provinciaRepositories.GetProvinciaByName(item.nombre);
+                    dynamic validate = await _provinciaRepositories.GetProvinciaByName(item.nombre);
 
                     if (validate == null)
                     {
                         provincias.nombre = item.nombre;
-                        //Pais 1 Argentina
-                        provincias.idpais = 1;
+                        //Pais  Argentina
+                        Pais auxpais =await _paisRepositories.GetPaisByName("Argentina");
+                        if (auxpais == null) {
+                            Pais pais = new Pais();
+                            pais.id = 0;
+                            pais.nombre = "Argentina";
+                            await _paisRepositories.InsertDefaultPais(pais);
+                            provincias.idpais =_paisRepositories.GetPaisByName("Argentina").Result.id;
+                        }
+                        else{
+                            provincias.idpais = auxpais.id;
+                        }
+                               
+                        
 
-                        await _provinciaRepositories.InsertDefaultProvincia(provincias);
+                       dynamic cant= await _provinciaRepositories.InsertDefaultProvincia(provincias);
+                        if (cant != null) aux += cant;
                     }
                 }
                 catch (Exception ex) {
                 }
             }
 
+            if (aux > 0) { mensaje = "SE MIGRARON CON EXITO " + aux + " DATOS DE PROVINCIAS DE LA API DEL GOBIERNO."; }
+            else mensaje = "NO HUBO INGRESO DE DATOS, DEBIDO A QUE YA ESTAN EN LA BASE DE DATOS O NO HAY DATOS PARA MIGRAR";
             
 
-            return Ok( datos);
+            return Ok( mensaje);
         }
 
         [HttpGet("{id}")]
@@ -67,6 +85,23 @@ namespace NetCoreAPIPostgreSQL.Controllers
         {
             return Ok(await _provinciaRepositories.GetProvincia(id));
         }
+        [Route("get")]
+        [HttpPost]
+        public async Task<IActionResult> GetAllProvincia([FromBody] ProvinciaFilters filters)
+        {
+
+            if (filters.paisNombre == null) {
+
+                filters.paisNombre = "";
+            }
+
+           
+
+           // string jsonString = System.Text.Json.JsonSerializer.Serialize(finish);
+
+            return Ok(await _provinciaRepositories.GetAllProvincias(filters));
+
+            }
 
         [HttpPost]
         public async Task<IActionResult> CreateProvincia([FromBody] Provincia provincia)

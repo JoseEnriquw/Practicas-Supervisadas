@@ -207,6 +207,7 @@ E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgre
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\staticwebassets\NetCoreAPIPostgreSQL.StaticWebAssets.xml
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\scopedcss\bundle\NetCoreAPIPostgreSQL.styles.css
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.RazorTargetAssemblyInfo.cache
+E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.csproj.CopyComplete
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.dll
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\ref\NetCoreAPIPostgreSQL.dll
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL\obj\Debug\net5.0\NetCoreAPIPostgreSQL.pdb

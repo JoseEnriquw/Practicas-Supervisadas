@@ -101,6 +101,15 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
             return result > 0;
         }
 
-    
+        public async Task<Pais> GetPaisByName(string name)
+        {
+             var db = dbConnection();
+            var query = @"
+                SELECT   id, nombre FROM public.pais
+                         WHERE nombre=@Name   ";
+
+
+            return await db.QueryFirstOrDefaultAsync<Pais>(query, new { Name = name});
+        }
     }
 }

@@ -1,5 +1,6 @@
 using Dapper;
 using NetCoreAPIPostgreSQL.Model;
+using NetCoreAPIPostgreSQL.Model.Filters;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -40,15 +41,58 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
         }
 
         //Devuelve todas las localidades
-        public async Task<IEnumerable<Localidad>> GetAllLocalidad()
+        public async Task<IEnumerable<Localidad>> GetAllLocalidad(LocalidadesFilters filters)
         {
 
             var db = dbConnection();
-            var query = @"
-                SELECT  id, nombre,idpartido  From public.localidades
+            string query;
+
+            if (filters.nombrePartido != "" && filters.nombreLocalidad != "")
+            {
+
+                query = @"
+                SELECT  lo.id, lo.nombre, lo.idpartido From public.localidades as lo
+                inner join partidos as part on part.id = lo.idpartido
+                        where part.nombre ilike @PartNombre and lo.nombre ILIKE  @LocNombre
+                        ORDER BY part.id ASC
                             ";
 
-            return await db.QueryAsync<Localidad>(query, new { });
+                return await db.QueryAsync<Localidad>(query, new { PartNombre = filters.nombrePartido, LocNombre = "%" + filters.nombreLocalidad + "%" });
+            }
+            else if (filters.nombrePartido != "")
+            {
+
+                query = @"
+                SELECT  lo.id, lo.nombre, lo.idpartido From public.localidades as lo
+                inner join partidos as part on part.id = lo.idpartido
+                        where part.nombre ilike @PartNombre
+                        ORDER BY part.id ASC
+                            ";
+
+                return await db.QueryAsync<Localidad>(query, new { PartNombre = filters.nombrePartido });
+            }
+            else if (filters.nombrePartido != "")
+            {
+
+                query = @"
+                SELECT  lo.id, lo.nombre, lo.idpartido From public.localidades as lo
+                inner join partidos as part on part.id = lo.idpartido
+                        where lo.nombre ILIKE  @LocNombre
+                        ORDER BY part.id ASC
+                            ";
+
+                return await db.QueryAsync<Localidad>(query, new { LocNombre = "%" + filters.nombreLocalidad + "%" });
+            }
+            else
+            {
+                query = @"
+                SELECT  id, nombre, idpartido From public.localidades
+                order by id asc
+                            ";
+                var localidad = await db.QueryAsync<Localidad>(query, new { });
+
+                return localidad;
+            }
         }
 
         //Devuelve una localidad POR ID
@@ -78,7 +122,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
         }
 
         //Insertar
-        public async Task<bool> InsertDefaultLocalidad(Localidad localidad)
+        public async Task<int> InsertDefaultLocalidad(Localidad localidad)
         {
             var db = dbConnection();
 
@@ -89,7 +133,7 @@ namespace NetCoreAPIPostgreSQL.Data.Repositories
 
             var result = await db.ExecuteAsync(sql, new { localidad.nombre, localidad.idpartido});
 
-            return result > 0;
+            return result ;
         }
 
          //Guardar

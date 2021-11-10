@@ -67,7 +67,6 @@ E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgre
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.AssemblyInfoInputs.cache
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.AssemblyInfo.cs
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.csproj.CoreCompileInputs.cache
-E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.csproj.CopyComplete
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.dll
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\ref\NetCoreAPIPostgreSQL.Data.dll
 E:\Programación\Practicas Supervisadas\Practicas-Supervisadas\NetCoreAPIPostgreSQL.Data\obj\Debug\net5.0\NetCoreAPIPostgreSQL.Data.pdb

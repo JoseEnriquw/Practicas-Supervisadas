@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using NetCoreAPIPostgreSQL.Services.PostModels;
 using Newtonsoft.Json;
+using NetCoreAPIPostgreSQL.Model.Filters;
 
 namespace NetCoreAPIPostgreSQL.Controllers
 {
@@ -25,10 +26,20 @@ namespace NetCoreAPIPostgreSQL.Controllers
             _provinciaRepositories = provinciaRepositories;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAllPartido()
+        [Route("get")]
+        [HttpPost]
+        public async Task<IActionResult> GetAllPartido([FromBody] PartidoFilters filters)
         {
-            return Ok(await _partidoRepositories.GetAllPartidos());
+            if (filters.nombrePartido == null)
+            {
+                filters.nombrePartido = "";
+            }
+            if (filters.nombreProvincia == null)
+            {
+                filters.nombreProvincia = "";
+            }
+
+            return Ok(await _partidoRepositories.GetAllPartidos(filters));
         }
 
         [HttpGet("getdatagobtodb")]
@@ -37,35 +48,43 @@ namespace NetCoreAPIPostgreSQL.Controllers
             var datos = await GetPartidoscDataGobAsyn();
             Partido partidos = new Partido();
             Provincia provincias = new Provincia();
-
+            string mensaje = "";
+            int aux = 0;
 
             foreach (PartidoViewModels item in datos.municipios)
             {
                 partidos.nombre = item.nombre;
-                //Pais 1 Argentina
-                // partidos.idprovincia = 1;
-
-                try
-                {
-                    dynamic validate = await _partidoRepositories.GetPartidoByName(partidos.nombre);
-                    if (validate == null)
+                
+                
+                    try
                     {
-                        provincias = await _provinciaRepositories.GetProvinciaByName(item.provincia.nombre);
-
-                        if (provincias != null)
+                        dynamic validate = await _partidoRepositories.GetPartidoByName(partidos.nombre);
+                        if (validate == null)
                         {
-                            partidos.idprovincia = provincias.id;
-                            await _partidoRepositories.InsertDefaultPartido(partidos);
+                            provincias = await _provinciaRepositories.GetProvinciaByName(item.provincia.nombre);
+
+                            if (provincias != null)
+                            {
+                                partidos.idprovincia = provincias.id;
+                                var cant = await _partidoRepositories.InsertDefaultPartido(partidos);
+                            if (cant != null) aux += cant;
+                        }
                         }
                     }
-                }
-                catch (Exception ex)
-                {
-                }
+                    catch (Exception ex)
+                    {
+                    }
+
+
+
+                
             }
+                if (aux > 0) { mensaje = "SE MIGRARON CON EXITO " + aux + " DATOS DE PARTIDOS DE LA API DEL GOBIERNO."; }
+                else mensaje = "NO HUBO INGRESO DE DATOS, DEBIDO A QUE YA ESTAN EN LA BASE DE DATOS O NO HAY DATOS PARA MIGRAR";
+            
 
 
-            return Ok(datos);
+            return Ok(mensaje);
         }
 
         [HttpGet("{id}")]
